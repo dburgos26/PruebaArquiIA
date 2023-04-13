@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Buscar frase</title>
+</head>
+<body>
+    {% extends 'base.html' %}
+
+    {% block content %}
+    <h1>Palabras y frases</h1>
+    <ul>
+    {% for palabra in palabras %}
+        <li>{{ palabra.palabra }}</li>
+        <ul>
+        {% for frase in palabra.frases.all %}
+        <li>{{ frase.frase }}</li>
+        {% endfor %}
+        </ul>
+    {% empty %}
+        <li>No hay palabras disponibles.</li>
+    {% endfor %}
+    </ul>
+    {% endblock %}
+</body>
+</html>
