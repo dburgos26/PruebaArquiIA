@@ -4,22 +4,20 @@
     <title>Buscar frase</title>
 </head>
 <body>
-    {% extends 'base.html' %}
-
-    {% block content %}
-    <h1>Palabras y frases</h1>
+    <h1>Buscar Palabra</h1>
+  <form method="post">
+    {% csrf_token %}
+    <label for="palabra">Palabra:</label>
+    <input type="text" id="palabra" name="palabra">
+    <button type="submit">Buscar</button>
+  </form>
+  {% if frases %}
+    <h2>Frases:</h2>
     <ul>
-    {% for palabra in palabras %}
-        <li>{{ palabra.palabra }}</li>
-        <ul>
-        {% for frase in palabra.frases.all %}
-        <li>{{ frase.frase }}</li>
-        {% endfor %}
-        </ul>
-    {% empty %}
-        <li>No hay palabras disponibles.</li>
-    {% endfor %}
+      {% for frase in frases %}
+        <li>{{ frase }}</li>
+      {% endfor %}
     </ul>
-    {% endblock %}
+  {% endif %}
 </body>
 </html>
