@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-l6f97t&a87xcq+qb%qmm(f-&jm&j%-5*fn_jyum+8n-q#ikqij
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['34.67.33.32', '10.128.0.3', '34.120.53.110']
+ALLOWED_HOSTS = ['34.67.33.32', '10.128.0.3', '34.120.53.110', '35.238.4.47']
 
 
 # Application definition
@@ -78,7 +78,7 @@ WSGI_APPLICATION = 'widmy.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'norm',
+        'NAME': 'datos',
         'USER': 'pep',
         'PASSWORD': '1234',
         'HOST': '10.128.0.2',
@@ -86,7 +86,7 @@ DATABASES = {
     },
     'palabras': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'iadb',
+        'NAME': 'ia',
         'USER': 'pep',
         'PASSWORD': '1234',
         'HOST': '10.128.0.5',

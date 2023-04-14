@@ -18,8 +18,5 @@ class Palabra(models.Model):
     frase2 = models.TextField()
     frase3 = models.TextField()
 
-    class Meta:
-        using = 'palabras'
-
     def __str__(self):
         return self.nombre
